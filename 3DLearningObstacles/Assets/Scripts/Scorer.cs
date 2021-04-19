@@ -5,9 +5,19 @@ using UnityEngine;
 public class Scorer : MonoBehaviour
 {
     int score = 0;
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        score += 1;
-        Debug.Log("You have bumped into something this many times "+score);
+        if (other.gameObject.tag != "Hit")
+        {
+
+            score += 1;
+            Debug.Log("Looks like you've hit something new " + " Your score id " + score);
+        }
+        else
+        {
+            
+            Debug.Log("You have bumped into this already " + " Your score id " + score);
+        }
+        
     }
 }
