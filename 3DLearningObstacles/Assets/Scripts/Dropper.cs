@@ -6,10 +6,14 @@ public class Dropper : MonoBehaviour
 {
     [SerializeField] int dropMoment = 0;
     float timeCounter = 0;
+    MeshRenderer renderer; //klasyczny przyk³ad Cachingu
+    Rigidbody body;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<MeshRenderer>().enabled = false;
+        renderer = GetComponent<MeshRenderer>();
+        renderer.enabled = false;
+        body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -19,8 +23,8 @@ public class Dropper : MonoBehaviour
 
         if(timeCounter > dropMoment)
         {
-            GetComponent<MeshRenderer>().enabled = true;
-            GetComponent<Rigidbody>().useGravity = true;
+            renderer.enabled = true;
+            body.useGravity = true;
         }
         
         //Debug.Log(Time.time);

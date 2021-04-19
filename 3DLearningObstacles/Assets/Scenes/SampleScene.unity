@@ -921,6 +921,7 @@ GameObject:
   - component: {fileID: 1577156173}
   - component: {fileID: 1577156172}
   - component: {fileID: 1577156177}
+  - component: {fileID: 1577156178}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -940,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f433597a2e37ca448a36f2125075241e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropMoment: 3
+  dropMoment: 1
 --- !u!65 &1577156173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1033,6 +1034,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1577156178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577156171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e63486a328a6344e92a57d500c85b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729200127
 GameObject:
   m_ObjectHideFlags: 0
